@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Urban Clap - Appointments Report</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #4a86e8;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      table {
+        border-collapse: collapse;
+        margin-top: 30px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #4a86e8;
+        color: #ffffff;
+        font-weight: bold;
+      }
+      tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      tbody tr:hover {
+        background-color: #f1f1f1;
+      }
+      .report-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      .report-info p {
+        margin: 0;
+      }
+      .report-info span {
+        font-weight: bold;
+        color: #4a86e8;
+      }
+      .footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="report-info">
+      <p>
+        Report Period: <span>{{ start_date }}</span> to
+        <span>{{ end_date }}</span>
+      </p>
+    </div>
+    <h1>Appointments Report</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Service Provider</th>
+          <th>User</th>
+          <th>Area</th>
+          <th>Slot</th>
+          <th>Work Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for appointment in appointments %}
+        <tr>
+          <td>{{ appointment.service_name }}</td>
+          <td>{{ appointment.provider_name }}</td>
+          <td>{{ appointment.user_name }}</td>
+          <td>{{ appointment.area_s }}</td>
+          <td>{{ appointment.slot_s }}</td>
+          <td>{{ appointment.work_date }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="6" style="text-align: center; color: #999">
+            No appointments found.
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="footer">
+      © {{ current_year }} Urban Clap. All rights reserved.
+    </div>
+  </body>
+</html>
