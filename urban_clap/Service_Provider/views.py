@@ -65,6 +65,7 @@ class ServicesView(viewsets.ModelViewSet):
         user = self.request.query_params.get("user")
         q = ""
         if description:
+            description = description.strip()
             if user:
                 if self.request.user.is_superuser:
                     q = self.queryset.filter(
@@ -86,6 +87,7 @@ class ServicesView(viewsets.ModelViewSet):
                     ).order_by("pk")
 
         else:
+            print("sjsjsj")
             if user:
                 if self.request.user.is_superuser:
                     q = self.queryset.filter(user_id=user).order_by("pk")
@@ -137,7 +139,7 @@ class CatogoryView(APIView):
     def get(self, request):
         try:
             queryset = Categories.objects.all().order_by("pk")
-            name = self.request.query_params.get("search")
+            name = self.request.query_params.get("search").strip()
             if name:
                 queryset = queryset.filter(name__icontains=name)
 

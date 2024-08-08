@@ -221,9 +221,9 @@ class SlotView(viewsets.ModelViewSet):
             if slot:
                 return Slots.objects.filter(
                     user=self.request.user.id, slot__icontains=slot
-                )
+                ).order_by("id")
             else:
-                return Slots.objects.filter(user=self.request.user.id)
+                return Slots.objects.filter(user=self.request.user.id).order_by("id")
 
     def create(self, request):
         try:
