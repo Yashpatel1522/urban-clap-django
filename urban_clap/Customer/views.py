@@ -29,6 +29,9 @@ from asgiref.sync import async_to_sync
 from rest_framework.decorators import api_view
 from Authentication.models import User
 
+from django.utils.timezone import now
+from django.db.models import Q, Count
+
 # yashvachhani
 
 
@@ -398,10 +401,6 @@ class ReadReviewe(viewsets.ModelViewSet):
             serializer = self.get_serializer(queryset, many=True)
 
             return CustomResponse(serializer.data, "Get Reviews Successfully")
-
-
-from django.utils.timezone import now
-from django.db.models import Q, Count
 
 
 @api_view(["GET"])

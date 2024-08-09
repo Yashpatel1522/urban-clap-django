@@ -173,7 +173,7 @@ class CatogoryView(APIView):
     # yash vachhani
     def patch(self, request):
         try:
-            id = self.request.query_params.get("id")
+            id = self.request.query_params.get("id")    
             try:
                 data = Categories.objects.get(pk=id)
                 update_data = CategorySerializer(data, data=request.data, partial=True)
@@ -334,9 +334,9 @@ def genrate_csv_report(request):
 
 
 from django.template.loader import render_to_string
-import tempfile
+# import tempfile
 from weasyprint import HTML
-import logging
+# import logging
 
 
 @api_view(["GET"])
