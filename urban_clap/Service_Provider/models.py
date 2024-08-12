@@ -1,9 +1,6 @@
 from django.db import models
 from Authentication.models import User
 
-# Create your models here.
-# class Area(models.Model):
-
 
 # yashvachhani
 class City(models.Model):
@@ -24,8 +21,6 @@ class Categories(models.Model):
 class Slots(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     slot = models.CharField(max_length=100)
-    # created_at = models.DateTimeField(auto_now_add=True)
-    # updated_at = models.DateTimeField(auto_now=True)
 
 
 class Services(models.Model):

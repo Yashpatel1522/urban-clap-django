@@ -1,3 +1,4 @@
+from weasyprint import HTML
 from django.shortcuts import render, HttpResponse
 from .serializer import ServiceSerializer, CategorySerializer, SelectedServiceData
 from rest_framework.views import APIView
@@ -9,11 +10,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from Authentication.permissions import (
     IsAdmin,
-    IsCustomer,
-    IsSeviceProvider,
-    RoleReturn,
     IsAdminOrServiceProvider,
-    IsAllRole,
 )
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -29,10 +26,8 @@ from Customer.serializer import AppointmentSerializerReaderForCSV
 import csv
 from rest_framework.decorators import api_view
 from django.http import FileResponse
-
+from django.template.loader import render_to_string
 from io import StringIO, BytesIO
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter
 
 
 # Create your views here.
@@ -87,7 +82,6 @@ class ServicesView(viewsets.ModelViewSet):
                     ).order_by("pk")
 
         else:
-            print("sjsjsj")
             if user:
                 if self.request.user.is_superuser:
                     q = self.queryset.filter(user_id=user).order_by("pk")
@@ -104,7 +98,6 @@ class ServicesView(viewsets.ModelViewSet):
         if self.request.method == "POST":
             user = self.request.user.id
             request.data["user"] = user
-            # request.data["category_id"]=request.data["category"]
 
             serializer = ServiceSerializer(data=request.data)
             if serializer.is_valid():
@@ -173,7 +166,7 @@ class CatogoryView(APIView):
     # yash vachhani
     def patch(self, request):
         try:
-            id = self.request.query_params.get("id")    
+            id = self.request.query_params.get("id")
             try:
                 data = Categories.objects.get(pk=id)
                 update_data = CategorySerializer(data, data=request.data, partial=True)
@@ -307,7 +300,6 @@ def genrate_csv_report(request):
 
         csv_buffer = StringIO()
         writer = csv.writer(csv_buffer)
-        # print(writer)
         writer.writerow(
             ["service", "service provider", "user", "area", "slot", "work_date"]
         )
@@ -331,12 +323,6 @@ def genrate_csv_report(request):
         return response
     else:
         return Response(status=400)
-
-
-from django.template.loader import render_to_string
-# import tempfile
-from weasyprint import HTML
-# import logging
 
 
 @api_view(["GET"])

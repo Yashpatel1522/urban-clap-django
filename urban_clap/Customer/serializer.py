@@ -19,7 +19,6 @@ class AppointmentSerializer(serializers.ModelSerializer):
             if work_date > today:
                 return work_date
             raise serializers.ValidationError("Invalid Date...!")
-        # return work_date
 
 
 class AppointmentSerializerReader(serializers.ModelSerializer):
@@ -48,9 +47,6 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = ["service", "rating", "comment", "images", "uploaded_images"]
-
-        # depth = 1
-        # read_only_fiealds = ["user"]
 
     def create(self, validated_data):
         user = self.context.get("request").user

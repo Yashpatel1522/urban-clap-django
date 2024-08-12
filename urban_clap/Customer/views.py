@@ -92,9 +92,7 @@ class AppointmentView(viewsets.ModelViewSet):
                         },
                         status=status.HTTP_400_BAD_REQUEST,
                     )
-                    # return CustomResponse(
-                    #     serializer.errors, "Please Enter Valid Data...!"
-                    # )
+
         except Exception as err:
             return Response(
                 {
@@ -103,19 +101,9 @@ class AppointmentView(viewsets.ModelViewSet):
                 },
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
-            # return CustomResponse("", str(err))
 
     def notify_service_providers(self, appointment):
-        # channel_layer = get_channel_layer()
-        # # Notify all connected WebSocket clients
-        # print(appointment.id, appointment.service.user.username, "apppp")
-        # async_to_sync(channel_layer.group_send)(
-        #     "notifications",
-        #     {
-        #         "type": "send_notification",
-        #         "message": f"New appointment booked: {appointment.id} for service provider {appointment.service.user.username}",
-        #     },
-        # )
+
         channel_layer = get_channel_layer()
         async_to_sync(channel_layer.group_send)(
             f"service_provider_{appointment.service.user.id}",
@@ -130,7 +118,6 @@ class AppointmentReader(viewsets.ModelViewSet):
     authentication_classes = [JWTAuthentication]
     serializer_class = AppointmentSerializerReader
     queryset = Appointment.objects.all()
-    # pagination_class = CustomPaginatorClass
 
     def get_permissions(self):
         if self.action in ["destroy"]:
@@ -280,7 +267,6 @@ class AppointmentStatusChart(APIView):
         services = [entry["service__description"] for entry in data2]
         counts2 = [entry["count"] for entry in data2]
 
-        # return Response()
 
         return Response(
             [
@@ -295,7 +281,6 @@ class AppointmentStatusChart(APIView):
 class CreateSlotDropDowonView(viewsets.ModelViewSet):
     authentication_classes = [JWTAuthentication]
     serializer_class = SlotSerializer
-    # pagination_class = CustomPaginatorClass
 
     queryset = list(Slots.objects.all())
 

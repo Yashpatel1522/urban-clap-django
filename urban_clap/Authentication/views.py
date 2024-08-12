@@ -243,7 +243,6 @@ class UpdateProfile(generics.RetrieveUpdateAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_object(self):
-        # print(self.request.user.profile.all().values())
         return self.request.user
 
     def put(self, request, *args, **kwargs):
