@@ -243,11 +243,10 @@ class UpdateProfile(generics.RetrieveUpdateAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_object(self):
-        return self.request.user
+        if self.request.user:
+            return self.request.user
 
     def put(self, request, *args, **kwargs):
-        print("data", request.data)
-        print("files", request.FILES)
         return super().put(request, *args, **kwargs)
 
 
