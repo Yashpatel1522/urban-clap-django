@@ -1,0 +1,783 @@
+{
+	"info": {
+		"_postman_id": "353e456c-90b4-4751-bbef-ff5a51bb2cb2",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35576147"
+	},
+	"item": [
+		{
+			"name": "Admin Copy 2",
+			"item": [
+				{
+					"name": "get login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTQzODIzLCJpYXQiOjE3MTg5NDMyMjMsImp0aSI6IjBhZDMyZmM4NjM0NTRiZWRiOTA4YjBkMDZlOGQyNTY1IiwidXNlcl9pZCI6MX0.54qvBjsp9NwkONBZ2_FWWdEvGz17gCmObwMJj0y5BWc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxMjAyOTUzLCJpYXQiOjE3MjEyMDExNTMsImp0aSI6IjVkODk0OTllNTZkZTRmMjliNjk1NDJlYTdkZGY2Y2YwIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJ2aXNodmFzIiwiaWQiOjF9.glfhZLHrS3FRSKn5wvSPfVDXsQdTZ9xp1n4UzgaqF3Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/users/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"users",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTQ0MDkyLCJpYXQiOjE3MTg5NDM0OTIsImp0aSI6Ijg2YTg4NWQ5NTk2MzQwNWViNDAzZDZlMjlmMGZmMWFiIiwidXNlcl9pZCI6MX0.Abeu4ultH-fwj15YK5FRUl8E8xgzT-5JrYNFAwmb3Hw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/users/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user profile update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTQ1MTY1LCJpYXQiOjE3MTg5NDQ1NjUsImp0aSI6IjRiZTc3N2Y1MTYyMzQ3N2Q4OWY2MWZiMTRjMDQyZDFjIiwidXNlcl9pZCI6NX0.TfKqQbeEaMJjZrjejMf3Gb5ezk6TBSNIR-7fLGp7Yv4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"brijeshbhai\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/users/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"users",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTQ1MTY1LCJpYXQiOjE3MTg5NDQ1NjUsImp0aSI6IjRiZTc3N2Y1MTYyMzQ3N2Q4OWY2MWZiMTRjMDQyZDFjIiwidXNlcl9pZCI6NX0.TfKqQbeEaMJjZrjejMf3Gb5ezk6TBSNIR-7fLGp7Yv4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/users/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin profile update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTY0MTg3LCJpYXQiOjE3MTg5NjM1ODcsImp0aSI6ImJjNWQ0MTE3ZDE1YjRiNjJhYTRiMWYwM2ZlMTg2NjZlIiwidXNlcl9pZCI6MjR9.GaPoZLqi0GqfOVYs8-gsfsDsw8DV3dWMqtskV8zEN34",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"customerfirst\",\n    \"last_name\":\"customerlast\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/users/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"users",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile photo add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTY5OTQ3LCJpYXQiOjE3MTg5NjkzNDcsImp0aSI6ImY2ZmMwN2UzNzI2NDRlZGZiNDQxZTkxNjhkMjdhNmE3IiwidXNlcl9pZCI6MjN9.EW6km3ovk4brw5wq1pTg9VWBGttWI2l7m2U0c4Sq45E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "service photo",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/vishvash-panshinya/Downloads/testimonials-img.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/profilephoto/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"profilephoto",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile photo show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxMjIzNTk4LCJpYXQiOjE3MjEyMjE3OTgsImp0aSI6IjI0MTNjYjRkZjYxNTRlOGM5OWVkMDhhNDdlMjllMDhiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJ2aXNodmFzIiwiaWQiOjF9.4AzmyKcxviB0EGkre4rEImRM39ZNOILpBauOR_o2tKY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/media/profilephoto/testimonials-img.png",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"media",
+								"profilephoto",
+								"testimonials-img.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxMjAwNTg4LCJpYXQiOjE3MjExOTk5ODgsImp0aSI6ImQwMzJiM2Q3MTJiMzRlN2Q4Y2ZkNWRkZGZhYmE5NTllIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJ2aXNodmFzIiwiaWQiOjF9.f0I6osxd9Zi3ruLX9WA_eNiFKHZ0eT5rCgvuTRQdpe4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/users/8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"users",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authetication Copy 2",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"customerfirst\",\n    \"last_name\":\"customerlast\",\n    \"email\": \"customerfirst@gmail.com\",\n    \"contact\": \"4477558899\",\n    \"username\":\"customer123\",\n    \"password\":\"customer123\",\n    \"password2\":\"customer123\",\n    \"address\":\"kargil petrol pump, ahemdabad, gujarat\",\n    \"is_staff\":\"False\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"vishvas\",\n    \"password\":\"PaVP_123@ss\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTU5NjU3LCJpYXQiOjE3MTg5NTkwNTcsImp0aSI6IjMwMDE2MDViMDM5MTRhNDI5YTgyMmY0MDRjOTFkMDY3IiwidXNlcl9pZCI6MjN9.KmHpc0LTMsZ_t0Y_Q-wWUXToBaVGLE1XAR4f1VInhOs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"current_password\":\"customer123\",\n    \"new_password\":\"service123\",\n    \"confirm_password\":\"service123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/change-password/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"change-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetpassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"brijesh123\",\n    \"new_password\":\"brijesh123\",\n    \"confirm_password\":\"brijesh123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/forgot-password/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"forgot-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refersh token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxOTAyOTgxNSwiaWF0IjoxNzE4OTQzNDE1LCJqdGkiOiIyYzZlN2E2OTU5NWE0Y2E3YjJjOTQ0MzNmNGQwZjMwOSIsInVzZXJfaWQiOjF9.s8Saf2uvhJnoGyLbWFB5ZvNhqqUfuKMMyACz2AIABrQ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/login/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"login",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTQ2MjIwLCJpYXQiOjE3MTg5NDU2MjAsImp0aSI6IjU1YzQwZDBlYTI2MzQxYzY4ODY1NmFiNDRhOTQzMGYxIiwidXNlcl9pZCI6MX0.TN21kadotwTUuEyBRvCQN78tzRzFC_hVp7nXtQB8bY4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refersh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxOTAzMjAyMCwiaWF0IjoxNzE4OTQ1NjIwLCJqdGkiOiJkY2NiMGNiMDdkMzE0OTgyODA4ZWYxZjcwODg2YjMwMCIsInVzZXJfaWQiOjF9.BDOHe737h8DFEnGx78sqBS1aKpVor84o6dYzlMPTxpM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/logout/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "final reg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "any",
+									"type": "text"
+								},
+								{
+									"key": "last_name ",
+									"value": "any",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "8866081331",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "any",
+									"type": "text"
+								},
+								{
+									"key": "is_staff",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "any",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "an123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "any38@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Yash@1234",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "Yash@1234",
+									"type": "text"
+								},
+								{
+									"key": "profile_photo",
+									"type": "file",
+									"src": "/home/yash-vachhani/Pictures/Screenshot from 2024-07-10 12-53-46.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/customuser/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"customuser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "final reg data get",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNzI0Mjc3LCJpYXQiOjE3MjE2Mzc4NzcsImp0aSI6IjlhODdkNzY4MzI0MTQ4ZTc4MDE1YjQ3ZGUxZjMyYWI2IiwidXNlcl9pZCI6MjF9.z5GHSpBBepaWaHv8xz5NbvC8u5jmlK_n70eLzm7Xyxk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "vachhaniyash",
+									"type": "text"
+								},
+								{
+									"key": "pk",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "yashvachhani@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "shshshsh",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "ahahahahh",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "8800886655",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "rajkoit",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "/home/yash-vachhani/Pictures/forget.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/updateuser/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"updateuser",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

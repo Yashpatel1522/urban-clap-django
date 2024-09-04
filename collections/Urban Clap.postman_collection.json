@@ -1,0 +1,1275 @@
+{
+	"info": {
+		"_postman_id": "c9331b1e-c050-48c1-b17c-17baa68553bd",
+		"name": "Urban Clap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35576147"
+	},
+	"item": [
+		{
+			"name": "Service Providers",
+			"item": [
+				{
+					"name": "Add Categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Categopry data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update name of category",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"name": "cache-control",
+								"sortOrder": 2,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added \"Cache-Control: no-cache\" as a precautionary measure to prevent the server from returning stale response when one makes repeated requests.\n\nYou can remove this header in the app settings or enter a new one with a different value.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "postman-token",
+								"sortOrder": 3,
+								"infoTitle": "We recommend using this header",
+								"info": "The Postman-Token header appends a random UUID to every outgoing request. Postman adds this header for API developers to better debug requests sent and to ensure separate requests appear distinct to the receiving server.\n\nYou can remove this header in the app settings.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "content-length",
+								"sortOrder": 5,
+								"infoTitle": "This header was automatically added",
+								"info": "The Content-Length header was added to indicate to the server the size of the request body that is added to this request. Server uses this value to parse the request body accurately.\n\nYou can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to body",
+								"key": "Content-Length",
+								"value": "0",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "host",
+								"sortOrder": 6,
+								"infoTitle": "We recommend using this header",
+								"info": "The Host header is added to identify the domain name for which a request is being sent to the server. This header is implicitly sent by every HTTP client.\n\nYou can remove the header or enter a new one with a different value. It is most likely that without this header, your request will return an HTTP 400 error.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "user-agent",
+								"sortOrder": 7,
+								"infoTitle": "We recommend using this header",
+								"info": "The User-Agent header is added to help the server identify Postman as the HTTP requesting application or client.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.32.1",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept",
+								"sortOrder": 8,
+								"infoTitle": "We recommend using this header",
+								"info": "The \"Accept: */*\" header is added to tell the server that Postman can understand and process all forms of response content types.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept",
+								"value": "*/*",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept-encoding",
+								"sortOrder": 9,
+								"infoTitle": "We recommend using this header",
+								"info": "The Accept-Encoding header is added to indicate to the server that Postman HTTP client supports a defined list of content-encoding or compression algorithms as response.\n\nYou can remove the header or enter a new one with a different value. Doing that may not accurately render the response within the app.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "connection",
+								"sortOrder": 10,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added the Connection header to indicate the server to keep the underlying network connection open once the current response is received. This allows Postman to reuse the same connection for faster response times in subsequent requests to the same server.\n\nYou can remove this header or enter a new one with a different value, such as `Connection: Close` to control this behaviour.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Connection",
+								"value": "keep-alive",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "1",
+								"type": "text",
+								"id": 0
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ac Washing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/category/?id=10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"category",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/category/?id=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"category",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4ODgzNDAzLCJpYXQiOjE3MTg4ODI4MDMsImp0aSI6IjdmNDM1YzU0NDMzMDRjZGZiNGRjMzUxNDljZjc5NDc5IiwidXNlcl9pZCI6MX0.Uijrq3dm6_yo2yJEa4PpqyakF79PDm3nOKsOlQNq6cM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\":3,\n    \"description\":\"we asdasdadare asd\",\n    \"area\":[3,2],\n    \"slot\":[1,2],\n    \"price\":\"120\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/services/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"services",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get  services with pagination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyMzE2MDYzLCJpYXQiOjE3MjIyMjk2NjMsImp0aSI6IjQxNDA1MDhjYWM1YjQ4ODJhNDg3Zjg3ODljNmQ5N2EwIiwidXNlcl9pZCI6MjF9.e-dxIeVwFHCsAfNQIaff0i8AGa6KhQqGagNJJsnVDkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "2",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/services/?page=1&search=First",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"services",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "First"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete services",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/services/15/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"services",
+								"15",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update services",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"category\": [3]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/services/16/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"services",
+								"16",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific cetegory data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/category/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"category",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searching services",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "New request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emp_id\":243\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userdata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/userdata/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"userdata",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "appintment",
+					"item": [
+						{
+							"name": "get appointment sorted",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTQ3NzY0LCJpYXQiOjE3MTg5NDcxNjQsImp0aSI6IjRhMmZmN2E4M2RmMTQ3YWJhM2I2ZjIzZDM1NTYxM2IzIiwidXNlcl9pZCI6MX0.jJIYbz9COQQNGlRQbOQv-jfneyf2b0CprxZ2iRo2ukc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/appointment/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"appointment",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add appointment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTQ3MjI2LCJpYXQiOjE3MTg5NDY2MjYsImp0aSI6ImJkNWIxMmQ4ZWU5MjQzYWJhYWFjMDU3MTk5YzhmY2RkIiwidXNlcl9pZCI6MX0.41QDFrFrxcYLYVmx2i6Q2-4M-kjq2qVKLv93aOpvkrI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\":1,\n    \"service\":19,\n    \"area\":2,\n    \"slot\":1,\n    \"work_date\":\"2024-06-22\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/appointment/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"appointment",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SP accept service",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTQ5MzI3LCJpYXQiOjE3MTg5NDg3MjcsImp0aSI6IjhlZmM0Y2QyYWQ5YzQ1N2Y4ODBiNTQwOWQ1ZjEyZjI4IiwidXNlcl9pZCI6MX0.ZgiUeVnP3GXS26SK1FlzLGvYYXrjCwufMP54-QIe2cI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"is_accept\":false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/appointment/27/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"appointment",
+										"27",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SP Reject service",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"is_reject\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/appointment/26/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"appointment",
+										"26",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SP update to service done",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4OTU3NDM1LCJpYXQiOjE3MTg5NTY4MzUsImp0aSI6Ijc4N2E1MGJkZDJjMDRmOGFiYTM5Y2ExODE3NDE1MzU2IiwidXNlcl9pZCI6MX0.fYEWmTfbNd1WHH-FDSMDdiVVFyVfDrog0LuLIlcf28k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"is_service_completed\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/appointment/31/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"appointment",
+										"31",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get slot",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTMzOTA5LCJpYXQiOjE3MjE0NDc1MDksImp0aSI6Ijc0MWNiMGRiNTZhNDQzYzI5M2IxOTZlYWExOGVmN2RkIiwidXNlcl9pZCI6MjF9.pZRaJS4zRDGN7Zho-30oW080R--RYGsk7xkOcV4BfGE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/slot/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"slot",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post slot",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTMzOTA5LCJpYXQiOjE3MjE0NDc1MDksImp0aSI6Ijc0MWNiMGRiNTZhNDQzYzI5M2IxOTZlYWExOGVmN2RkIiwidXNlcl9pZCI6MjF9.pZRaJS4zRDGN7Zho-30oW080R--RYGsk7xkOcV4BfGE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slot\":\"10am to 15am\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/slot/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"slot",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete slot",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTMzOTA5LCJpYXQiOjE3MjE0NDc1MDksImp0aSI6Ijc0MWNiMGRiNTZhNDQzYzI5M2IxOTZlYWExOGVmN2RkIiwidXNlcl9pZCI6MjF9.pZRaJS4zRDGN7Zho-30oW080R--RYGsk7xkOcV4BfGE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/slot/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"slot",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update slot",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTMzOTA5LCJpYXQiOjE3MjE0NDc1MDksImp0aSI6Ijc0MWNiMGRiNTZhNDQzYzI5M2IxOTZlYWExOGVmN2RkIiwidXNlcl9pZCI6MjF9.pZRaJS4zRDGN7Zho-30oW080R--RYGsk7xkOcV4BfGE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slot\":\"11am to 12pm\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/slot/3/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"slot",
+										"3",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sp charts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/appointment-status-chart/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"appointment-status-chart",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "appointment get based on login user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNDg2NzkxLCJpYXQiOjE3MjI0MDAzOTEsImp0aSI6ImRkMjg1YTQzYmE0YTQxNThhNGFjNWE4NDE5Yjc3OWRkIiwidXNlcl9pZCI6NDN9.hX_MxFXNSvZs4V9TvRGWCQX3rhTGNuU7bxNFK1tMF1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/appointmentpagination/?page=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"appointmentpagination",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "service cancel by user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNDg2NzkxLCJpYXQiOjE3MjI0MDAzOTEsImp0aSI6ImRkMjg1YTQzYmE0YTQxNThhNGFjNWE4NDE5Yjc3OWRkIiwidXNlcl9pZCI6NDN9.hX_MxFXNSvZs4V9TvRGWCQX3rhTGNuU7bxNFK1tMF1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"is_user_cancel\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/appointment/213/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"appointment",
+										"213",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Customer Review",
+					"item": [
+						{
+							"name": "get Review",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNDEwNDU0LCJpYXQiOjE3MjIzMjQwNTQsImp0aSI6IjI4YWQwMDg5OTEwYzQxZDdhNzA4NDA2NDQ3NGI5MmE4IiwidXNlcl9pZCI6NDN9.evYm52_FFRHvaIOkARl9OGG1XlUYhjxue4ByrOf3dFU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/review/?serviceid=45",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"review",
+										""
+									],
+									"query": [
+										{
+											"key": "serviceid",
+											"value": "45"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add Review new",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNDEwNDU0LCJpYXQiOjE3MjIzMjQwNTQsImp0aSI6IjI4YWQwMDg5OTEwYzQxZDdhNzA4NDA2NDQ3NGI5MmE4IiwidXNlcl9pZCI6NDN9.evYm52_FFRHvaIOkARl9OGG1XlUYhjxue4ByrOf3dFU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "service",
+											"value": "19",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "uploaded_images",
+											"type": "file",
+											"src": "/home/yash-vachhani/Pictures/Screenshot from 2024-03-22 12-30-21.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/review/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"review",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "top service providers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/urbanclap/top-service-providers/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"urbanclap",
+										"top-service-providers",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "csv report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNTc2MDkxLCJpYXQiOjE3MjI0ODk2OTEsImp0aSI6IjliMWVmNGU1ZGNjMDQ5NWE4NWNlZWY1MTIxNGMyNGNjIiwidXNlcl9pZCI6MX0.UC_ru4ow_e2cTeu0gJ1F6v6HdcxQPVurvXR66TT3HZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/urbanclap/csv/?start_date=2024-09-1&end_date=2024-09-20",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"urbanclap",
+								"csv",
+								""
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-09-1"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-09-20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"yashvachhani\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/urbanclap/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"urbanclap",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\":\"customersecond\",\n    \"last_name\":\"customersecond\",\n    \"email\": \"customersecond@gmail.com\",\n    \"contact\": \"4477558899\",\n    \"username\":\"customer1231\",\n    \"password\":\"customer123\",\n    \"password2\":\"customer123\",\n    \"address\":\"kargil petrol pump, ahemdabad, gujarat\",\n    \"is_staff\":true \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/urban-clap/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"urban-clap",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot-password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"yashvachhani\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/urbanclap/forgot-password/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"urbanclap",
+						"forgot-password",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
